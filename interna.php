@@ -11,14 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
-<div class="precos"><h2>Melhores Preços</h2></div>
 
-<div class="lista-precos">
+<div class="cat"><h2>NOME DA CATEGORIA</h2></div>
+
+<div class="lista-categoria">
 <ul class="list-group">
   <li class="list-group-item">Cras justo odio</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -26,6 +22,10 @@
   <li class="list-group-item">Porta ac consectetur ac</li>
   <li class="list-group-item">Vestibulum at eros</li>
 </ul>
+</div>
+
+<div class="button-int">
+<button type="button" class="btn btn-primary">VER TODOS OS FILMES</button>
 </div>
 </body>
 
