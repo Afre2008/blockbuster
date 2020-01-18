@@ -22,13 +22,14 @@ FROM
         LEFT JOIN
     filme_categoria fc ON c.categoria_id = fc.categoria_id
         LEFT JOIN
-    filme f ON f.filme_id = fc.filme_id;");
+    filme f ON f.filme_id = fc.filme_id
+     group by  c.nome;");
 $categoriaFilme->execute();
 $todosFilmes = $categoriaFilme->fetchAll();
 
 $precoFilme = $conn->prepare("SELECT titulo, descricao, ano_de_lancamento, preco_da_locacao
 FROM filme
-ORDER BY preco_da_locacao ASC;");
+ORDER BY preco_da_locacao ASC LIMIT 4;");
 $precoFilme->execute();
 $todosPrecosFilmes = $precoFilme->fetchAll();
 

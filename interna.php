@@ -1,5 +1,5 @@
 <?php require_once('header.php'); ?>
-
+<?php require_once('querysLocadora.php'); ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,17 +13,16 @@
 <body>
 
 <div class="cat"><h2>NOME DA CATEGORIA</h2></div>
+<?php foreach($todosFilmes as $filmes){
 
-<div class="lista-categoria">
-<ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
+echo "
+<div class='lista-categoria'>
+<ul class='list-group'>
+  <li class='list-group-item'>$filmes[titulo]</li>
+
 </ul>
-</div>
-
+</div>";
+}?>
 <div class="button-int">
 <button type="button" class="btn btn-primary">VER TODOS OS FILMES</button>
 </div>

@@ -1,5 +1,5 @@
 <?php require_once('header.php'); ?>
-
+<?php require_once('querysLocadora.php'); ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,21 +11,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
-<div class="precos"><h2>Melhores Preços</h2></div>
 
+    <?php foreach($todasCategorias as $categoria){
+// echo $key;
+    echo "
+    <div class='card' style= 'width: 18rem;'>
+    <div class='card-body'>
+        <a href='interna.php' class='card-link'>$categoria[nome]</a>
+      </div>
+    </div>";
+}?>
+
+
+<div class="precos"><h2>Melhores Preços</h2></div>
 <div class="lista-precos">
-<ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
+<?php foreach($todosPrecosFilmes as $preco){
+  // var_dump($preco);
+echo "<ul class='list-group'>
+  <li class='list-group-item'>$preco[titulo] $preco[descricao] $preco[preco_da_locacao]</li>
+
+</ul>";
+}?>
 </div>
 </body>
 
